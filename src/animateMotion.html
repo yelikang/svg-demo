@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>图形沿着路径移动</title>
+    </head>
+    <body>
+        <svg
+            width="245"
+            height="259"
+            viewBox="0 0 245 259"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path
+                id="myPath"
+                d="M1.99999 1C-4.33334 63.3333 11.2 172.8 124 112C236.8 51.2 249.667 184 242 258"
+                stroke="black"
+            />
+
+            <circle r="10" fill="red" id="myCircle"></circle>
+
+            <!-- 设定哪个图形跟随哪个路径移动 -->
+            <animateMotion href="#myCircle" dur="5s" repeatCount="indefinite">
+                <!-- mpath: href映射轨迹路径-->
+                <mpath href="#myPath" />
+            </animateMotion>
+        </svg>
+    </body>
+</html>

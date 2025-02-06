@@ -1,13 +1,36 @@
 <style>
-  svg{
-    border:1px solid red;
-  }
+    svg {
+        border: 1px solid red;
+    }
 </style>
 
+<svg
+    width="500"
+    height="500"
+    xmlns="http://www.w3.org/2000/svg"
+>
+    <!-- 矩形在用户坐标系统中的位置和大小 -->
+    <rect width="50" height="50" fill="blue">
+      <!-- 动画 -->
+        <animate attributeName="x" from="0" to="50" dur="2s" repeatCount="2" fill="freeze" begin="click"></animate>
+        <animate attributeName="y" from="0" to="50" dur="2s" repeatCount="2" fill="freeze" begin="click"></animate>
 
-<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" >
-  <!-- 矩形在用户坐标系统中的位置和大小 -->
-  <rect width="50" height="50" fill="blue" />
+    </rect>
+    <text fill="red" x="100" y="100">123</text>
 
 
+    <!-- foreignObject: 外部div元素嵌入 -->
+    <!-- <foreignObject width="60" height="60">
+    <div>123</div>
+  </foreignObject> -->
 </svg>
+
+<script>
+    // const svg = document.querySelector('svg');
+
+    // const foreignObject = document.createElementNS('http://www.w3.org/2000/svg', 'foreignObject');
+    // foreignObject.setAttribute('width', '60');
+    // foreignObject.setAttribute('height', '60');
+    // foreignObject.innerHTML = '<div>123</div>';
+    // svg.appendChild(foreignObject);
+</script>
